@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.SubActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <SurfaceView
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:id="@+id/camera_view"
+            android:visibility="gone"
+            />
+
+        <com.journeyapps.barcodescanner.CompoundBarcodeView
+            android:id="@+id/barcode_scanner"
+            android:layout_width="match_parent"
+            android:layout_height="320dp">
+
+        </com.journeyapps.barcodescanner.CompoundBarcodeView>
+
+        <ImageView
+            android:id="@+id/bar_view_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:visibility="gone"/>
+
+
+
+        <ProgressBar
+            android:id="@+id/loading_merchant_details"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/merchant_detail_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/merchant_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    />
+
+                <TextView
+                    android:id="@+id/merchant_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/merchant_address"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/category_spinner"
+                android:layout_width="250dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:entries="@array/android_dropdown_arrays"
+                android:prompt="@string/choose_cat"
+                android:padding="5dp" />
+
+            <Button
+                android:id="@+id/update_location_btn"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_alignParentLeft="true"
+                android:text="Update Location"
+                android:onClick="updateLocation"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

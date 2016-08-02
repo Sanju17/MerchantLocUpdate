@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MerchantLocUpdate </string>
+    <string name="choose_cat">Choose the Category:</string>
+    <string-array name="android_dropdown_arrays">
+        <item>Food</item>
+        <item>Entertainment</item>
+        <item>Fashion</item>
+        <item>Misc</item>
+    </string-array>
+</resources>
